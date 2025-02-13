@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loadingOverlay" class="overlay">
+      <div class="loading">
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+
+    <div id="dateContainer" class="container">
+      <h1>Enter the Date we first talk</h1>
+      <h2>(sana tanda mo pa)</h2>
+      <input type="text" id="dateInput" placeholder="DD/MM/YYYY" />
+      <button class="button" onclick="validateDate()">Submit</button>
+      <p id="errorMessage" class="hidden" style="color: red">nako po! nakalimutan na.</p>
+    </div>
+
+    <div id="dateGif" class="gif-container">
+      <img src="https://media1.tenor.com/m/mixQhMj82-oAAAAC/puuung-love.gif" alt="Valentine's Day Date GIF" />
+    </div>
+
+    <div id="valentineContainer" class="container">
+      <div class="photo-booth">
+        <img src="image1.jpg" alt="Photo 1" />
+        <img src="image2.jpg" alt="Photo 2" />
+        <img src="image3.jpg" alt="Photo 3" />
+        <img src="image4.jpg" alt="Photo 4" />
+      </div>
+      <br />
+      <h2>Will you be my Valentine?</h2>
+      <div class="buttons">
+        <button class="yes-button" onclick="acceptValentine()">Yes!</button>
+        <button class="no-button" onclick="moveNoButton()">No</button>
+      </div>
+    </div>
+
+    <div id="valentineGif" class="gif-container">
+      <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Valentine's Day GIF" />
+    </div>
+
+    <div id="planContainer" class="container">
+      <h1>Plan Our Special Day</h1>
+      <h2>(YAAAY THANK YOU FOR ACCEPTING! I LOVE YOU!)</h2>
+      <p>Where should we go?</p>
+      <input type="text" id="placeInput" placeholder="" />
+      <p>What should we eat?</p>
+      <input type="text" id="foodInput" placeholder="" />
+      <p>What should we do?</p>
+      <input type="text" id="activityInput" placeholder="" />
+      <p>When are you free?</p>
+      <input type="date" id="dateInputPlan" placeholder="" />
+      <button class="button" onclick="savePlan()">Save Plan</button>
+      <p id="planError" class="hidden" style="color: red">Please fill in all fields.</p>
+    </div>
+
+    <div id="planGif" class="gif-container">
+      <img src="https://media1.tenor.com/m/Xcs7X6cS60cAAAAC/couple.gif" alt="Plan GIF" />
+    </div>
+
+    <div id="showPlanContainer" class="container">
+      <h1>Our Special Day Plan</h1>
+      <h2>(CAN'T WAIT WAAAH! I LOVE YOU SO MUCH!)</h2>
+      <p><strong>Place:</strong> <span id="savedPlace"></span></p>
+      <p><strong>Foods:</strong> <span id="savedFood"></span></p>
+      <p><strong>Activities:</strong> <span id="savedActivity"></span></p>
+      <p><strong>Date:</strong> <span id="savedDate"></span></p>
+      <p>ps: screenshot mo for proof hehe</p>
+    </div>
+
+    <div id="showPlanGif" class="gif-container">
+      <img src="https://media.tenor.com/Yz3hPEf-kT8AAAAi/love-romance.gif" alt="Show Plan GIF" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
